@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | 博客</title>
+    <title>Git 学习 | 博客</title>
     <meta name="author" content="Yang" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -37,6 +37,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -150,95 +154,78 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>Git 学习</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/7/9
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E6%80%BB%E7%BB%93/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                总结
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
             
-<div id="archives">
-    
-    <div id="timeline-wrap" ref="timeline">
-        
-        <div class="timeline" data-title="无病呻吟">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/7/9</div>
-                <a href="/2024/07/09/index1/">
-                    <h3>无病呻吟</h3>
+            
+            <span class="tag">
+                
+                <a href="/tags/git/" style="color: #03a9f4">
+                    git
                 </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/categories/%E6%9C%89%E6%84%9F%E8%80%8C%E5%8F%91/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            有感而发
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E6%97%A5%E8%AE%B0/" style="color: #ffa2c4">
-                                日记
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <div class="timeline" data-title="git学习">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2024/7/9</div>
-                <a href="/2024/07/09/index2/">
-                    <h3>Git 学习</h3>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/" style="color: #ff7d73">
+                    技术栈
                 </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/categories/%E6%80%BB%E7%BB%93/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            总结
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                        
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/git/" style="color: #03a9f4">
-                                git
-                            </a>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/" style="color: #00bcd4">
-                                技术栈
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
+            </span>
+            
+        </span>
         
     </div>
+    
+    <div class="content" v-pre>
+        <h3 id="Git的概念"><a href="#Git的概念" class="headerlink" title="Git的概念"></a>Git的概念</h3><blockquote>
+<p>分布式的版本管理工具,提高多人开发的效率</p>
+</blockquote>
+<hr>
+<span id="more"></span>
+
+<h4 id="本地生成-Git-仓库的方式"><a href="#本地生成-Git-仓库的方式" class="headerlink" title="本地生成 Git 仓库的方式"></a>本地生成 Git 仓库的方式</h4><ol>
+<li>git init</li>
+<li>git clone https:&#x2F;&#x2F;…(远程仓库网址)</li>
+<li>git status 检查当前目录是否是git仓库</li>
+<li>ls -a 可以查看到隐藏的 .git 文件夹</li>
+</ol>
+<h4 id="git-status-分类"><a href="#git-status-分类" class="headerlink" title="git status 分类"></a>git status 分类</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Untrack 未跟踪状态</span><br><span class="line">Unmodified  未修改状态 </span><br><span class="line">Modified 已修改 </span><br><span class="line">Staged 已暂存</span><br><span class="line">&lt;br /&gt;</span><br><span class="line">当此仓库目录新建一个文件,此文件就是 Untrack 状态</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="/./images/gitLine.jpg" alt="图片"></p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
 </div>
 
             <footer id="footer">
@@ -269,6 +256,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>
