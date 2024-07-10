@@ -184,14 +184,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/git/" style="color: #03a9f4">
+                <a href="/tags/git/" style="color: #00bcd4">
                     git
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/" style="color: #ff7d73">
+                <a href="/tags/%E6%8A%80%E6%9C%AF%E6%A0%88/" style="color: #00a596">
                     技术栈
                 </a>
             </span>
@@ -213,10 +213,28 @@
 <li>git status 检查当前目录是否是git仓库</li>
 <li>ls -a 可以查看到隐藏的 .git 文件夹</li>
 </ol>
-<h4 id="git-status-分类"><a href="#git-status-分类" class="headerlink" title="git status 分类"></a>git status 分类</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Untrack 未跟踪状态</span><br><span class="line">Unmodified  未修改状态 </span><br><span class="line">Modified 已修改 </span><br><span class="line">Staged 已暂存</span><br><span class="line">&lt;br /&gt;</span><br><span class="line">当此仓库目录新建一个文件,此文件就是 Untrack 状态</span><br></pre></td></tr></table></figure>
-
-
-<p><img src="/./images/gitLine.jpg" alt="图片"></p>
+<h4 id="Git-基本流程"><a href="#Git-基本流程" class="headerlink" title="Git 基本流程"></a>Git 基本流程</h4><p><img src="/2024/07/09/index2/gitLine.jpg"></p>
+<h4 id="git-status-分类"><a href="#git-status-分类" class="headerlink" title="git status 分类"></a>git status 分类</h4><p><img src="/2024/07/09/index2/status.jpg"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Untrack 未跟踪状态</span><br><span class="line">Unmodified  未修改状态 </span><br><span class="line">Modified 已修改 </span><br><span class="line">Staged 已暂存</span><br><span class="line">&lt;br /&gt;</span><br><span class="line">git status 展示红色状态，表示当前工程目录还没有被放到暂存区和本地库；</span><br><span class="line">&lt;br /&gt;</span><br><span class="line">git add .(文件名), 表示把当期那文件夹下所有的文件(或某文件)都放到暂存区。</span><br><span class="line">&lt;br /&gt;</span><br><span class="line">git commit -m [message] 把暂存区的文件全部提交到本地仓库并添加注释</span><br></pre></td></tr></table></figure>
+<h4 id="查看提交的流程"><a href="#查看提交的流程" class="headerlink" title="查看提交的流程"></a>查看提交的流程</h4><ol>
+<li><code>git log</code> 查看详细的流程信息</li>
+<li><code>git ls-files</code> 查看暂存区的内容</li>
+<li><code>git log --oneline</code> 查看简洁的流程信息</li>
+<li><code>git reflog</code> 查看历史记录，可以回溯操作</li>
+</ol>
+<h4 id="git-reset-的三种模式"><a href="#git-reset-的三种模式" class="headerlink" title="git reset 的三种模式"></a>git reset 的三种模式</h4><p><img src="/2024/07/09/index2/reset.jpg"></p>
+<blockquote>
+<p>git reset –soft(hard |  mixed) 回退的版本 id;操作失误后可以通过 git reflog查看历史记录进行回溯</p>
+</blockquote>
+<h4 id="git-diff"><a href="#git-diff" class="headerlink" title="git diff"></a>git diff</h4><blockquote>
+<p>git diff 可以对工作区跟暂存区的内容进行比较<br>git diff 版本id 版本id2 可以对两个版本进行比较</p>
+</blockquote>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><hr>
+<h4 id="本地仓库远程连接远程仓库"><a href="#本地仓库远程连接远程仓库" class="headerlink" title="本地仓库远程连接远程仓库"></a>本地仓库远程连接远程仓库</h4><ol>
+<li>git remote add origin <a href="mailto:&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#109;">&#x67;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#109;</a>:yangquan-an&#x2F;gits.git(远程连接)</li>
+<li>git remote -v 查看远程连接的仓库</li>
+<li>由于新建的远程仓库是空的，所以要加上-u这个参数:git push -u origin master:master(本地:远程)</li>
+</ol>
 
     </div>
     
